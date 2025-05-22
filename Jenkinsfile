@@ -6,7 +6,7 @@ pipeline {
                 script {
                     // Build the project
                     echo 'Building...'
-                    git branch: 'main', url: 'https://github.com/rizki2232/acss.git'
+                    git branch: 'main', url: 'https://github.com/BangEjak04/acs-docker.git'
                     sh 'cp .env.example .env'
                     sh 'docker compose down'
                     sh 'docker compose up -d --build'
