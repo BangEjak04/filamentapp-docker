@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        // stage('Clean Workspace') {
-        //     steps {
-        //         sh 'git clean -fdx'
-        //         sh 'git reset --hard'
-        //     }
-        // }
         stage('Build') {
             steps {
                 script {
