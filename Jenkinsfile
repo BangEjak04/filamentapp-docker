@@ -1,5 +1,11 @@
 pipeline {
     agent any
+
+    environment {
+        CONTAINER_NAME = 'acss'
+        PORT = '80'
+    }
+
     stages {
         stage('Build') {
             steps {
