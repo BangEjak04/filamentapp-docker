@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        CONTAINER_NAME = 'acss'
-        PORT = '80'
+        REPOSITORY_NAME = 'https://github.com/BangEjak04/acs-docker.git'
+        BRANCH = 'main'
     }
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
                 script {
                     // Build the project
                     echo 'Building...'
-                    git branch: 'main', url: 'https://github.com/BangEjak04/acs-docker.git'
+                    git branch: "$BRANCH", url: "$REPOSITORY_NAME"
                     sh 'cp .env.example .env'
                     sh 'docker compose down'
                     sh 'docker compose up -d --build'
@@ -45,7 +45,7 @@ pipeline {
 
     post {
         success {
-            echo "✅ Deployment successful. Visit: http://<ip-server>:$PORT"
+            echo "✅ Deployment successful. Visit: http://<ip-server>"
         }
         failure {
             echo "❌ Deployment failed! Check logs for details."

@@ -65,8 +65,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-# PHPMyAdmin
-Username = root
-Password = qwerty123
+## Note
+- PHPMyAdmin
+-- Username = root
+-- Password = qwerty123
 
-sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/<nama-job>
+- Before build on Jenkins
+sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/<job-name>
