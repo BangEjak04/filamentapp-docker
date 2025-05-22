@@ -29,7 +29,7 @@ pipeline {
                 script {
                     // Run tests
                     echo 'Testing...'
-                    sh './vendor/bin/pest'
+                    sh 'docker-compose exec -T php php artisan test'
                 }
             }
         }

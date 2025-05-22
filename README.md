@@ -68,3 +68,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # PHPMyAdmin
 Username = root
 Password = qwerty123
+
+sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/<nama-job>
